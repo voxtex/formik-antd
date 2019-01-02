@@ -1,0 +1,29 @@
+{
+  "name": "@glue/formik-antd",
+  "version": "0.1.0",
+  "private": false,
+  "main": "main.js",
+  "files": [
+    "lib",
+    "main.js"
+  ],
+  "types": "./lib/types.d.ts",
+  "scripts": {
+    "tsc": "tsc"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "antd": ">=3.11<4",
+    "formik": ">=1.4<2",
+    "react": ">=16.7<17",
+    "react-dom": ">=16.7<17"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.9",
+    "@types/react-dom": "^16.0.11",
+    "antd": "^3.11.5",
+    "formik": "^1.4.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
+}
