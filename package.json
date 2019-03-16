@@ -10,7 +10,8 @@
   "scripts": {
     "tsc": "tsc --version && tsc",
     "watch": "tsc --watch",
-    "cleanbuild": "rm -r node_modules && npm install && tsc"
+    "cleanbuild": "rm -r node_modules && npm install && tsc",
+    "start": "react-scripts start"
   },
   "dependencies": {},
   "peerDependencies": {
@@ -20,6 +21,7 @@
     "react-dom": ">= 16.8.0 < 17"
   },
   "devDependencies": {
+    "react-scripts": "2.1.8",
     "moment": "2.24.0",
     "@types/jest": "24.0.9",
     "@types/node": "11.10.4",
