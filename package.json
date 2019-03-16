@@ -13,14 +13,7 @@
     "cleanbuild": "rm -r node_modules && npm install && tsc",
     "start": "react-scripts start"
   },
-  "dependencies": {},
-  "peerDependencies": {
-    "antd": ">= 3.12.1 < 4",
-    "formik": ">= 1.4.1 < 2",
-    "react": ">= 16.8.0 < 17",
-    "react-dom": ">= 16.8.0 < 17"
-  },
-  "devDependencies": {
+  "dependencies": {
     "react-scripts": "2.1.8",
     "moment": "2.24.0",
     "@types/jest": "24.0.9",
