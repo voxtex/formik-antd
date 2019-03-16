@@ -12,7 +12,7 @@ export const DatePickerField = (
   <Field name={props.name}>
     {(field: FieldProps) => (
       <DatePicker
-        value={moment(field.field.value)}
+        value={moment.default(field.field.value)}
         onChange={date => {
           field.form.setFieldValue(props.name, date.toISOString());
         }}
