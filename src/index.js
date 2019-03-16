@@ -11,7 +11,7 @@ import {
   EnumStringEditor,
   ArrayEditor,
   FormikDebug
-} from "./index";
+} from "./exports";
 import { Formik } from "formik";
 import { Divider } from "antd";
 import "./index.css";
