@@ -11,10 +11,10 @@ import {
   EnumStringEditor,
   ArrayEditor,
   FormikDebug
-} from "@jbuschke/formik-antd";
+} from "./index";
 import { Formik } from "formik";
 import { Divider } from "antd";
-import "./sample.css";
+import "./index.css";
 import "antd/dist/antd.css";
 
 function App() {

@@ -5,7 +5,7 @@
   "files": [
     "lib"
   ],
-  "main": "./lib/index.js",
+  "main": "./lib/exports.js",
   "types": "./lib/types.d.ts",
   "scripts": {
     "tsc": "tsc --version && tsc",
@@ -33,5 +33,11 @@
     "typescript": "3.3.3333",
     "react": "16.8.3",
     "react-dom": "16.8.3"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

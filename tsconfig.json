@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "outDir": "./lib",
     "module": "esnext",
     "target": "es5",
-    "lib": ["es6", "dom"],
+    "lib": [
+      "es6",
+      "dom"
+    ],
     "sourceMap": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "skipLibCheck": true,
     "moduleResolution": "node",
     "rootDir": "src",
@@ -19,7 +21,14 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": false,
     "declaration": true,
-    "declarationMap": true
+    "declarationMap": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
   },
   "exclude": [
     "lib",
@@ -30,5 +39,8 @@
     "webpack",
     "jest",
     "src/setupTests.ts"
+  ],
+  "include": [
+    "src"
   ]
 }
