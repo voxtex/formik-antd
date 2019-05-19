@@ -1,4 +1,5 @@
 [![Build Status](https://dev.azure.com/jannikb/glue/_apis/build/status/jannikb%20Formik-antd?branchName=master)](https://dev.azure.com/jannikb/glue/_build/latest?definitionId=4?branchName=master)
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors)
 [![license](https://badgen.now.sh/badge/license/MIT)](./LICENSE)
 
 [CodeSandbox](https://codesandbox.io/s/x2941k7vpz)
@@ -7,10 +8,11 @@
 
 The 1.0.0 release is coming soon to provide a solid and stable api. A preview release is available.
 
-The preview release has some breaking changes:
+For the v1 release some breaking changes happened/are happening:
 
 - The `validate` prop has been removed (https://github.com/jannikbuschke/Formik-antd/issues/34).
-- The `SubmitButton` component only works inside a `Form` component. 
+- The `SubmitButton` component only works inside a `Form` component.
+- Some undocumented/"unofficial" components have been removed (`Action` and `IDataSourceObject`)
 
 I am currently looking for overall feedback.
 
@@ -77,11 +79,11 @@ To learn about Antd components just visit the official docs. Most supported comp
 | :white_check_mark:    | TimePicker     | { name } & [TimePickerProps](https://ant.design/components/input/#components-input-demo-textarea)      |
 | :white_check_mark:    | AutoComplete   | { name } & [AutoCompleteProps](https://ant.design/components/auto-complete/)                           |
 | :white_check_mark:    | Cascader       | { name } & [CascaderProps](https://ant.design/components/cascader/)                                    |
-| :black_square_button: | Mention        | { name } & [MentionProps](https://ant.design/components/mention/)                                      |
+| :white_check_mark:    | Mention        | { name } & [MentionProps](https://ant.design/components/mention/)                                      |
 | :white_check_mark:    | Rate           | { name } & [RateProps](https://ant.design/components/rate/)                                            |
 | :white_check_mark:    | Slider         | { name } & [SliderProps](https://ant.design/components/slider/)                                        |
 | :white_check_mark:    | TreeSelect     | { name } & [TreeSelectProps](https://ant.design/components/tree-select/)                               |
-| :black_square_button: | Transfer       | { name } & [TransferProps](https://ant.design/components/transfer/)                                    |
+| :white_check_mark:    | Transfer       | { name } & [TransferProps](https://ant.design/components/transfer/)                                    |
 
 ## Submitting / Form
 
@@ -113,9 +115,9 @@ The SubmitButton must be placed inside a `Form` component.
 ## Validation
 
 Showing validation messages can be accomplished with the  `Form.Item` component (or `FormItem` which is the same). It 
-- renders *error* messages if the field has been touched and the corresponding field has a validation error (and changes the border color of enclosed input component to red)
-- renders a green *success* icon messages if the field has been touched and the corresponding field does not have a validation error
-- exposes some layout features and a label (visit https://ant.design/components/form/ for the details)
+- renders *error* messages if the field has been touched and the corresponding field has a validation error (and changes the border color of enclosed input component to red).
+- renders a green *success* icon messages if it's `showValidateSuccess: boolean` prop is set to true, the field has been touched and the corresponding field does not have a validation error.
+- exposes some layout features and a label (visit https://ant.design/components/form/ for the details).
 
 ```jsx
 <Form.Item name="firstName" >
@@ -123,11 +125,11 @@ Showing validation messages can be accomplished with the  `Form.Item` component 
 </Form.Item>
 ```
 
-How the validation logic is done is not part of this library.
+How the validation logic is implemented is not part of this library.
 
 ## Lists / Nested objects
 
-Nested objects and arrays can be accessed with lodash-like bracket syntax das described in the [Formik documentation](https://jaredpalmer.com/Formik/docs/guides/arrays).
+Nested objects and arrays can be accessed with lodash-like bracket syntax as described in the [Formik documentation](https://jaredpalmer.com/Formik/docs/guides/arrays).
 
 ```jsx
 <InputField name="friends[0].firstName" />
@@ -155,3 +157,15 @@ Typescript cannot (yet) enforce types of children. In the future this hopefully 
 ## License
 
 MIT
+
+## Contributors
+
+Special thanks to all contributors:
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+<table><tr><td align="center"><a href="https://github.com/NileDaley"><img src="https://avatars3.githubusercontent.com/u/15862011?v=4" width="100px;" alt="Nile Daley"/><br /><sub><b>Nile Daley</b></sub></a><br /><a href="https://github.com/jannikbuschke/formik-antd/commits?author=NileDaley" title="Code">💻</a></td><td align="center"><a href="http://www.jameswmann.com"><img src="https://avatars2.githubusercontent.com/u/436270?v=4" width="100px;" alt="James W Mann"/><br /><sub><b>James W Mann</b></sub></a><br /><a href="https://github.com/jannikbuschke/formik-antd/commits?author=jwmann" title="Code">💻</a></td><td align="center"><a href="https://www.jannikbuschke.de/blog"><img src="https://avatars2.githubusercontent.com/u/5894881?v=4" width="100px;" alt="Jannik Buschke"/><br /><sub><b>Jannik Buschke</b></sub></a><br /><a href="https://github.com/jannikbuschke/formik-antd/commits?author=jannikbuschke" title="Code">💻</a></td><td align="center"><a href="https://github.com/LarsJK"><img src="https://avatars2.githubusercontent.com/u/1528255?v=4" width="100px;" alt="Lars-Jørgen Kristiansen"/><br /><sub><b>Lars-Jørgen Kristiansen</b></sub></a><br /><a href="https://github.com/jannikbuschke/formik-antd/commits?author=LarsJK" title="Code">💻</a></td><td align="center"><a href="https://github.com/voxtex"><img src="https://avatars3.githubusercontent.com/u/735455?v=4" width="100px;" alt="Adam"/><br /><sub><b>Adam</b></sub></a><br /><a href="https://github.com/jannikbuschke/formik-antd/commits?author=voxtex" title="Code">💻</a></td></tr></table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
