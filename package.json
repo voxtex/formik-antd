@@ -1,24 +1,30 @@
 {
   "name": "@jbuschke/formik-antd",
-  "version": "1.0.0-preview.0",
+  "version": "1.2.0",
   "author": "Jannik Buschke",
-  "description": "Declarative bindings for Formik and Ant Design.",
+  "description": "Dead simple declarative bindings for Formik and Ant Design.",
   "displayName": "formik-antd",
   "keywords": [
+    "react",
     "formik",
     "antd",
-    "ant design",
+    "ant",
+    "design",
     "form"
   ],
   "license": "MIT",
   "private": false,
   "files": [
-    "lib"
+    "lib",
+    "src",
+    "es"
   ],
+  "module": "./es/index.js",
   "main": "./lib/index.js",
   "types": "./lib/types.d.ts",
   "scripts": {
-    "tsc": "tsc --version && tsc",
+    "build": "tsc && tsc -p tsconfig.es.json",
+    "tsc": "tsc && tsc -p tsconfig.es.json",
     "watch": "tsc --watch",
     "cleanbuild": "rm -r node_modules && npm install && tsc"
   },
@@ -37,12 +43,16 @@
     "@types/node": "11.13.4",
     "@types/react": "16.8.11",
     "@types/react-dom": "16.8.4",
-    "antd": "3.16.2",
-    "formik": "1.5.2",
+    "antd": "3.19.2",
+    "formik": "1.5.7",
     "moment": "2.24.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "tslib": "1.9.3",
-    "typescript": "3.4.3"
+    "typescript": "3.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jannikbuschke/formik-antd/"
   }
 }

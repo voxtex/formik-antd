@@ -6,12 +6,15 @@ import { CascaderProps as $CascaderProps } from 'antd/lib/cascader';
 
 export type CascaderProps = FormikFieldProps & $CascaderProps;
 
-export const Cascader = ({ name, ...restProps }: CascaderProps) => (
-    <Field name={name}>
-        {({ field: { value }, form: { setFieldValue } }: FieldProps) => (
+export const Cascader = ({ name, validate, ...restProps }: CascaderProps) => (
+    <Field name={name} validate={validate}>
+        {({ field: { value }, form: { setFieldValue, setFieldTouched } }: FieldProps) => (
             <$Cascader
                 value={value}
-                onChange={value => setFieldValue(name, value)}
+                onChange={value => {
+                    setFieldValue(name, value)
+                    setFieldTouched(name, true)
+                }}
                 {...restProps}
             />
         )}

@@ -6,13 +6,14 @@ import { TransferProps as $TransferProps } from "antd/lib/transfer";
 
 export type TransferProps = FormikFieldProps & $TransferProps;
 
-export const Transfer = ({ name, ...restProps }: TransferProps) => (
-  <Field name={name}>
-    {({ field: { value }, form: { setFieldValue } }: FieldProps) => (
+export const Transfer = ({ name, validate, ...restProps }: TransferProps) => (
+  <Field name={name} validate={validate}>
+    {({ field: { value }, form: { setFieldValue, setFieldTouched } }: FieldProps) => (
       <$Transfer
         targetKeys={value || []}
         onChange={v => {
-          setFieldValue(name, v)
+          setFieldValue(name, v);
+          setFieldTouched(name, true)
         }}
         {...restProps}
       />
